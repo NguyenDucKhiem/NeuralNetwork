@@ -2,16 +2,11 @@ import numpy as np
 import csv
 
 
-WeeklyInfectiousFile = '/dataset/Weekly infectious.csv'
+WeeklyInfectiousFile = 'dataset/Weekly infectious.csv'
 '''
 
 '''
 def check(item):
-    # print(item)
-    # if item[1:-1] is 'Nan':
-    #     return -1
-    # elif item[1:-1] is '':
-    #     return -2
     if item == '':
         return -1
     if item[0] >= '0' and item[0] <= '9':
@@ -19,17 +14,6 @@ def check(item):
     else:
         return -3
 
-'''
-X = []
-with open(WeeklyInfectiousFile, 'r') as f:
-    fields = f.readline()
-    lines = f.readlines()
-    for line in lines:
-        arr = line[:-1].split(",")
-        X.append([check(item) for item in arr])
-        print(X)
-        break
-'''
 
 
 IndexInput = 1
@@ -46,5 +30,3 @@ with open(WeeklyInfectiousFile, 'r') as csvfile:
         Y = np.append(Y, [check(row[IndexOutput])], axis=0)
 
 print(X)
-
-# X = np.loadtxt('../dataset/Weekly infectious.csv',delimiter=',', skiprows=1)
