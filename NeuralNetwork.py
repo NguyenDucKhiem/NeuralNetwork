@@ -43,7 +43,7 @@ class NeuralNetwork:
         
         Return:
         A -- A[layer]
-        z
+        z --
         '''
         self.Z[layer] = np.dot(self.W[layer], A_pre) + self.B[layer]
         A = g(self.Z[layer])
