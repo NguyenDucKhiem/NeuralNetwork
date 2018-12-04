@@ -2,7 +2,7 @@ import Math
 import numpy as np
 
 class NeuralNetwork:
-    def __init__(self, X, Y, numberLayer):
+    def __init__(self, X, Y, arrLayer):
         '''
         Init class
         
@@ -17,7 +17,22 @@ class NeuralNetwork:
         self.Z = {}
         self.W = {}
         self.B = {}
-        self.numberLayer = numberLayer
+        self.arrLayer =  arrLayer
+
+    # GRANED FUNCTION: InitParameters
+    def InitParameters(self, n_x, n_y, layer, k):
+        """
+        Init W, B and save in layer
+        Argument:
+        n_x -- size of the input layer
+        n_y -- size of the output layer
+        layer -- layer
+        k -- kernel number
+        
+        Returns:
+        """
+        self.W[layer] = np.random.randn(n_y,n_x) * k
+        self.B[layer] = np.zeros((n_y,1))
 
     # GRADED FUNCTION: Set
     def Set(self, W, B, layer):
@@ -182,3 +197,4 @@ class NeuralNetwork:
                 "db": db}
         
         return params, grads, costs
+# END CLASS
