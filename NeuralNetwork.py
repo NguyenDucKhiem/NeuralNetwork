@@ -33,6 +33,21 @@ class NeuralNetwork:
         """
         self.W[layer] = np.random.randn(n_y,n_x) * k
         self.B[layer] = np.zeros((n_y,1))
+    # END FUNCTION: InitParameters
+
+    # GRANDED FUNCTION: Init()
+    def Init(self):
+        '''
+        Init W, B
+        '''
+        for i in range(0, len(self.arrLayer) + 1):
+            if i == 0:
+                self.InitParameters(self.X.shape[0], self.arrLayer[i], i, 0.01)
+            elif i == len(self.arrLayer):
+                self.InitParameters(self.arrLayer[i - 1], self.Y.shape[0], i, 0.01)
+            else :
+                self.InitParameters(self.arrLayer[i - 1], self.arrLayer[i], i, 0.01)
+
 
     # GRADED FUNCTION: Set
     def Set(self, W, B, layer):
