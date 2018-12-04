@@ -36,17 +36,17 @@ class NeuralNetwork:
     # END FUNCTION: InitParameters
 
     # GRANDED FUNCTION: Init()
-    def Init(self):
+    def Init(self, a):
         '''
         Init W, B
         '''
         for i in range(0, len(self.arrLayer) + 1):
             if i == 0:
-                self.InitParameters(self.X.shape[0], self.arrLayer[i], i, 0.01)
+                self.InitParameters(self.X.shape[0], self.arrLayer[i], i, a)
             elif i == len(self.arrLayer):
-                self.InitParameters(self.arrLayer[i - 1], self.Y.shape[0], i, 0.01)
+                self.InitParameters(self.arrLayer[i - 1], self.Y.shape[0], i, a)
             else :
-                self.InitParameters(self.arrLayer[i - 1], self.arrLayer[i], i, 0.01)
+                self.InitParameters(self.arrLayer[i - 1], self.arrLayer[i], i, a)
 
 
     # GRADED FUNCTION: Set
@@ -99,7 +99,7 @@ class NeuralNetwork:
 
         dZ = dA * g(self.Z[layer])
         dA_pre = np.dot(self.W[layer].T, dZ)
-        dW = np.dot(dZ, dA.T) * 1. / m 
+        dW = np.dot(dZ, dA_pre.T) * 1. / m 
         dB = np.sum(dZ, axis=1, keepdims=True) * 1. / m
 
         return {"dA" : dA_pre, "dW" : dW, "dB" : dB}

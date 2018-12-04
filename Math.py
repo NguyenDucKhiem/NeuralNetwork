@@ -1,6 +1,29 @@
 import math
 import numpy as np
 
+def ReLU(x):
+    '''
+    function ReLU
+    
+    Arguments:
+    x -- real
+
+    Return:
+    value of function ReLU with x
+    '''
+    return np.maximum(x, 0)
+
+def DerivativeReLU(x):
+    '''
+    function derivative ReLU
+    
+    Arguments:
+    x -- real
+
+    Return:
+    value of function derivative ReLU with x
+    '''
+    return np.greater(x, 0).astype(int)
 
 def basic_sigmoid(x):
     """
