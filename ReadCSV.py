@@ -3,9 +3,9 @@ import csv
 # import pandas
 # file dataset
 WeeklyInfectiousFile = ['dataset/Weekly infectious.csv', 0, 1, 40]
-PSIFile = ['dataset\psi.csv', 0, 1, 2, 4, 5, 6, 7] # index 3 how to convert 4p.m to int??
-RainFile = ['dataset\rainfall-monthly-number-of-rain-days.csv', 0, 1, 2]
-Weather = ['dataset\weather.csv']   
+PSIFile = ['dataset/psi.csv', 0, 1, 2, 4, 5, 6, 7] # index 3 how to convert 4p.m to int??
+RainFile = ['dataset/rainfall-monthly-number-of-rain-days.csv', 0, 1, 2]
+Weather = ['dataset/weather.csv']   
 
 
 # function check item
