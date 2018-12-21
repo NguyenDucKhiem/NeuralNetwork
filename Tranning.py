@@ -3,15 +3,10 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import tensorflow as tf 
 import math
 import numpy as np
-# Thu vien mo rong 
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 from keras.models import Sequential, Model
 from keras.layers import Dense, Activation, Dropout, Input
 from keras.layers import concatenate
 from keras import optimizers
-# Trinh toi uu Adam
-from keras.optimizers import Adam
 
 # you need to normalize values to prevent under/overflows.
 def normalize(matrix, mean, std):
