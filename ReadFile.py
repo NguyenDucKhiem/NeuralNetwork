@@ -1,5 +1,6 @@
 import ReadCSV
 import numpy as np
+import csv
 
 week_month = [5, 9, 13, 18, 22, 26, 31, 35, 39, 44, 49, 53]
 month_day = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -26,10 +27,10 @@ def ConvertWeek(month, day):
     return week
 
 
-def Read():
-    patientFile = ReadCSV.Read(ReadCSV.WeeklyInfectiousFile).T
-    rainFile = ReadCSV.Read(ReadCSV.RainFile).T
-    psiFile = ReadCSV.Read(ReadCSV.PSIFile).T
+def Read(InfectiousFile, RainFile, PSIFile):
+    patientFile = ReadCSV.Read(InfectiousFile).T
+    rainFile = ReadCSV.Read(RainFile).T
+    psiFile = ReadCSV.Read(PSIFile).T
 
     ret = []
 
@@ -37,8 +38,6 @@ def Read():
         year = patient[0]
         week = patient[1]
         month = ConvertMonth(week)
-        if year == 2018:
-            year = 2017
         
         index_rain = 0
         index_psi = 0
@@ -46,6 +45,7 @@ def Read():
             if year == rain[0] and month == rain[1]:
                 index_rain = rain[2]
                 break
+
         sum_psi = 0
         number_psi = 0
         for psi in psiFile:
@@ -53,13 +53,17 @@ def Read():
                 sum_psi += (psi[3] + psi[4] + psi[5] + psi[6]) / 4
                 number_psi += 1
 
-
         if number_psi != 0:
             index_psi = int(sum_psi / number_psi)
-        else :
-            index_psi = 20
-        
-        ret.append([patient[0], patient[1], index_psi, index_rain, patient[2]])
+
+        if index_rain != 0 and number_psi != 0:
+            ret.append([patient[0], patient[1], index_psi, index_rain, patient[2]])
     
     return ret
-        
+
+with open('./dataset/data.csv', 'w') as data_file:
+    write = csv.DictWriter(data_file, fieldnames=['year', 'week', 'psi', 'rain', 'patient'])
+
+    ret = Read(ReadCSV.WeeklyInfectiousFile, ReadCSV.RainFile, ReadCSV.PSIFile)
+    for data in ret:
+        write.writerow({'year': data[0], 'week': data[1], 'psi': data[2], 'rain': data[3], 'patient': data[4]})

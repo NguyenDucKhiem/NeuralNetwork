@@ -1,0 +1,24 @@
+************************************
+Shape data      :   253
+Shape val       :   64
+Test size       :   0.2
+Random state    :   52
+Loss on test    :   0.02196326293051243
+************************************
+Shape data      :   253
+Shape val       :   64
+Test size       :   0.2
+Random state    :   52
+Loss on test    :   0.019723625853657722
+************************************
+Shape data      :   253
+Shape val       :   64
+Test size       :   0.2
+Random state    :   52
+Loss on test    :   0.021421175450086594
+************************************
+Shape data      :   253
+Shape val       :   64
+Test size       :   0.2
+Random state    :   52
+Loss on test    :   0.019772637635469437
