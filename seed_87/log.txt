@@ -2,5 +2,5 @@
 Shape data      :   253
 Shape val       :   39
 Shape test       :   25
-Random state    :   52
-Loss on test    :   0.028778351843357086
+Random state    :   87
+Loss on test    :   0.025305861607193947

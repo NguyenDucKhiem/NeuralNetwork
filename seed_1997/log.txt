@@ -1,0 +1,24 @@
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test       :   25
+Random state    :   1997
+Loss on test    :   0.016291659325361252
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test       :   25
+Random state    :   1997
+Loss on test    :   0.03930779546499252
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test       :   25
+Random state    :   1997
+Loss on test    :   0.017180263996124268
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.018407044932246208
