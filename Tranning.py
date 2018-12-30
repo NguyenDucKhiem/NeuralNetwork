@@ -20,6 +20,8 @@ from sklearn.model_selection import train_test_split
 # -----------------------------------------
 # size val and test is 20% data
 test_size = 0.2
+# size val is 60% size val and test
+val_size = 0.6
 # seed
 random_state = 1997
 # -----------------------------------------
@@ -67,7 +69,7 @@ val_patient_norm = normalize(val_patient, mean_patient, std_patient)
 
 # spilit test
 test_data_norm, val_data_norm, test_patient_norm, val_patient_norm = train_test_split(val_data_norm, 
-        val_patient_norm, test_size=0.6, random_state=random_state)
+        val_patient_norm, test_size=val_size, random_state=random_state)
 # Input layer
 data_inputs = Input(shape=(4,), name='data')
 
@@ -125,7 +127,7 @@ with open('./seed_{}/log.txt'.format(random_state), 'a') as file:
     file.write("Shape val       :   {0}\n".format(val_data_norm.shape[0]))
     # write shape test to file
     file.write("Shape test      :   {0}\n".format(test_data_norm.shape[0]))
-    # write seeb to file
+    # write seed to file
     file.write("Random state    :   {0}\n".format(random_state))
     # write loss to file
     file.write("Loss on test    :   {0}\n".format(score))
