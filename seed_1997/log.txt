@@ -28,3 +28,123 @@ Shape val       :   39
 Shape test      :   25
 Random state    :   1997
 Loss on test    :   0.015490343794226646
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.014041653834283352
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.01773485727608204
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.014673268422484398
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.015415884554386139
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.01532488502562046
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.01411084271967411
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.017662066966295242
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.014010506682097912
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.02658247947692871
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.033661745488643646
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.016318507492542267
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.016084792092442513
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.01718340441584587
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.015874600037932396
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.022107675671577454
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.01541548129171133
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.019274819642305374
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.018370436504483223
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.013214515522122383
+************************************
+Shape data      :   253
+Shape val       :   39
+Shape test      :   25
+Random state    :   1997
+Loss on test    :   0.016764016821980476

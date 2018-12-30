@@ -19,11 +19,11 @@ from sklearn.model_selection import train_test_split
 
 # -----------------------------------------
 # size val and test is 20% data
-test_size = 0.2
+test_size = 0.3
 # size val is 60% size val and test
 val_size = 0.6
 # seed
-random_state = 1997
+random_state = 52
 # -----------------------------------------
 # you need to normalize values to prevent under/overflows.
 def normalize(matrix, mean, std):
@@ -75,15 +75,9 @@ data_inputs = Input(shape=(4,), name='data')
 
 # Hiden layer
 # layer 1
-layer = Dense(5, activation='tanh', name='layer')(data_inputs)
+layer = Dense(7, activation='tanh', name='layer')(data_inputs)
 # layer 2
-layer = Dense(5, activation='tanh', name='layer_2')(layer)
-# dropout layer
-layer = Dropout(0.5)(layer)
-# layer 3
-layer = Dense(5, activation='tanh', name='layer_3')(layer)
-# layer 4
-layer = Dense(3, activation='tanh', name='layer_4')(layer)
+# layer = Dense(7, activation='tanh', name='layer_2')(layer)
 # dropout layer
 layer = Dropout(0.5)(layer)
 
