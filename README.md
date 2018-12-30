@@ -16,6 +16,7 @@ Thư mục:
   ReadCSV.py: đọc các file dữ liệu và chuyển đổi dữ liệu sang dạng số.
   ReadFile.py: đọc 3 file dữ liệu và mix dữ liệu.
   Training.py: chứa model, đọc dữ liệu đã mix, normalize dữ liệu, training, trả về kết quả trong thư mục ./seed_*.
+  Plot.py đọc kết quả train và vẽ biểu đồ.
   
   ./seed_*: gồm thư mục logs chứa TensorBoard mỗi lần training.
 		log.txt: chứa thông tin mỗi lần training.
@@ -66,3 +67,4 @@ Cách cài đặt:
 	Chỉnh sửa seed, phân chia tập dữ liệu (biến test_size, val_size, random_state) trong file Tranning.py
 	Training bằng cách chạy file Trainning.py terminal: python3 Trainning.py
 	Xem TensorBoard bằng lệnh terminal: tensorboard --logdir=./seed_*/logs
+Xem biểu đồ kết quả đạt được bằng chạy Plot.py terminal: python3 Graph.py [<đường dẫn result>]. Ví dụ: python3 Graph.py ./seed_52/result.csv có thể nhập nhiều đường dẫn liên tiếp
