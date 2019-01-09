@@ -23,7 +23,7 @@ test_size = 0.3
 # size val is 60% size val and test
 val_size = 0.6
 # seed
-random_state = 52
+random_state = 2019
 # -----------------------------------------
 # you need to normalize values to prevent under/overflows.
 def normalize(matrix, mean, std):

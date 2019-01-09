@@ -4,3 +4,9 @@ Shape val       :   39
 Shape test       :   25
 Random state    :   2019
 Loss on test    :   0.04424012079834938
+************************************
+Shape data      :   221
+Shape val       :   58
+Shape test      :   38
+Random state    :   2019
+Loss on test    :   0.03487266080552026

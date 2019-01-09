@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # import sys libraly
 import sys
 
-def plot(path):
+def plot(path, isShow = 0, isSave = 1, dirsave = './image.png'):
     '''
     read data result after train and plot them\n
     path: path file result.csv 
@@ -31,7 +31,12 @@ def plot(path):
     # suptitle plot
     plt.suptitle('Patient and result affter trainng')
     # show plot
-    plt.show()
+    if isShow == 1:
+        plt.show()
+
+    # if save
+    if isSave == 1:
+        plt.savefig(dirsave)
 
 # Main
 if __name__ == "__main__":
@@ -39,8 +44,32 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         # print screen no path
         print("No path!\n")
+    elif len(sys.argv) == 2:
+        # call plot
+        plot(sys.argv[1])
+    elif len(sys.argv) == 3:
+        # if -s show screen and don't save image
+        if sys.argv[2] == '-s':
+            plot(sys.argv[1], isShow=1, isSave=0)
+        # if -l don't show screen and save image
+        elif sys.argv[2] == '-i':
+            plot(sys.argv[1], isShow=0, isSave=1)
+        # if -a show screen and save image
+        elif sys.argv[2] == '-a':
+            plot(sys.argv[1], isShow=1, isSave=1)
+        else:
+            # anything else print error
+            print("error\n")
+    elif len(sys.argv) == 4:
+         # if -i don't show screen and save image have dir argv[2]
+        if sys.argv[2] == '-i':
+            plot(sys.argv[1], isShow=0, isSave=1, dirsave=sys.argv[2])
+        # if -a show screen and save imagehave dir argv[2]
+        elif sys.argv[2] == '-a':
+            plot(sys.argv[1], isShow=1, isSave=1, dirsave=sys.argv[2])
+        else:
+            # anything else print error
+            print("error\n")
     else:
-        # foreach path
-        for i in range(1, len(sys.argv)):
-            # call plot
-            plot(sys.argv[i])
+        # anything else print error
+        print('error')
