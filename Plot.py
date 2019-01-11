@@ -30,13 +30,14 @@ def plot(path, isShow = 0, isSave = 1, dirsave = './image.png'):
     plt.ylabel('number patient')
     # suptitle plot
     plt.suptitle('Patient and result affter trainng')
+    
+    # if save
+    if isSave == 1:
+        plt.savefig(dirsave, dpi=500)
     # show plot
     if isShow == 1:
         plt.show()
-
-    # if save
-    if isSave == 1:
-        plt.savefig(dirsave)
+    
 
 # Main
 if __name__ == "__main__":
@@ -63,10 +64,10 @@ if __name__ == "__main__":
     elif len(sys.argv) == 4:
          # if -i don't show screen and save image have dir argv[2]
         if sys.argv[2] == '-i':
-            plot(sys.argv[1], isShow=0, isSave=1, dirsave=sys.argv[2])
+            plot(sys.argv[1], isShow=0, isSave=1, dirsave=sys.argv[3])
         # if -a show screen and save imagehave dir argv[2]
         elif sys.argv[2] == '-a':
-            plot(sys.argv[1], isShow=1, isSave=1, dirsave=sys.argv[2])
+            plot(sys.argv[1], isShow=1, isSave=1, dirsave=sys.argv[3])
         else:
             # anything else print error
             print("error\n")
