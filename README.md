@@ -30,26 +30,19 @@ Mô hình mạng noron:
   
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #
-_________________________________________________________________
+=================================================================
 data (InputLayer)            (None, 4)                 0
 _________________________________________________________________
-layer (Dense)                (None, 5)                 25
+layer (Dense)                (None, 7)                 35
 _________________________________________________________________
-layer_2 (Dense)              (None, 5)                 30
+dropout_1 (Dropout)          (None, 7)                 0
 _________________________________________________________________
-dropout_1 (Dropout)          (None, 5)                 0
-_________________________________________________________________
-layer_3 (Dense)              (None, 5)                 30
-_________________________________________________________________
-layer_4 (Dense)              (None, 3)                 18
-_________________________________________________________________
-dropout_2 (Dropout)          (None, 3)                 0
-_________________________________________________________________
-layer_output (Dense)         (None, 1)                 4
-_________________________________________________________________
-Total params: 107
-Trainable params: 107
+layer_output (Dense)         (None, 1)                 8
+=================================================================
+Total params: 43
+Trainable params: 43
 Non-trainable params: 0
+
 
 Trước khi train dữ liệu cần được batch normalization (-1 ~ 1) để dễ dàng sử lí và tốt khi sử dụng hàm tanh.
 Phân chia tập dữ liệu ra làm 3 phần train(80%), val(11%), test(9%).
@@ -67,4 +60,6 @@ Cách cài đặt:
 	Chỉnh sửa seed, phân chia tập dữ liệu (biến test_size, val_size, random_state) trong file Tranning.py
 	Training bằng cách chạy file Trainning.py terminal: python3 Trainning.py
 	Xem TensorBoard bằng lệnh terminal: tensorboard --logdir=./seed_*/logs
-Xem biểu đồ kết quả đạt được bằng chạy Plot.py terminal: python3 Graph.py [<đường dẫn result>]. Ví dụ: python3 Graph.py ./seed_52/result.csv có thể nhập nhiều đường dẫn liên tiếp
+Xem biểu đồ kết quả đạt được bằng chạy Plot.py terminal: python3 Graph.py [<đường dẫn result>] [option] [<đường dẫn image>].
+	Tùy chọn -s show ra ngoài màn hình, -i lưu ảnh không show màn hình, -a vừa lưu ảnh vừa show màn hình.
+	tùy chọn và đường dẫn có thể không có. mặc định không show màn hình lưu ảnh ./image.png
