@@ -38,7 +38,6 @@ def plot(path, isShow = 0, isSave = 1, dirsave = './image.png'):
     if isShow == 1:
         plt.show()
     
-
 # Main
 if __name__ == "__main__":
     # if No argv
